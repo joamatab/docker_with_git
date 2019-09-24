@@ -1,6 +1,9 @@
 
 build:
-	docker build . -t ubuntu_with_git
+	docker build . -t joamatab/ubuntu_with_git:v1
 
 run:
-	docker run -it ubuntu_with_git sh 
+	docker run -it joamatab/ubuntu_with_git sh 
+
+push:
+	docker push joamatab/ubuntu_with_git:v1  
