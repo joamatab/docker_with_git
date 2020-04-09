@@ -1,6 +1,6 @@
 FROM ubuntu
-LABEL Maintainer="Joaquin <joaquin@mac"
-LABEL Version="0.0.2"
+LABEL Maintainer="Joaquin Matres <j>"
+LABEL Version="0.0.3"
 
 # APT stuff
 RUN apt-get update && apt-get install -y \
@@ -10,3 +10,5 @@ RUN apt-get update && apt-get install -y \
     rsync \
     make
 
+RUN wget -O 'klayout.deb' 'https://www.klayout.org/downloads/Ubuntu-18/klayout_0.26.4-1_amd64.deb'
+RUN dpkg -i klayout.deb
